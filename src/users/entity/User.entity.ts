@@ -18,9 +18,12 @@ export class User extends BaseEntity {
     @Column({ type: "varchar", nullable: false, })
     account: string;
 
+    @Column({ type: "varchar", nullable: false, })
+    email: string;
+
     @Column({ type: "varchar", nullable: false })
     @Exclude()
-    password_Hash: string;
+    password: string;
 
     @OneToOne(() => Profile, { cascade: ['insert', 'update'] })
     @JoinColumn()

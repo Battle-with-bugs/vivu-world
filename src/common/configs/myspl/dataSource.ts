@@ -9,5 +9,5 @@ export const UseTypeOrmModule = TypeOrmModule.forRoot({
     database: process.env.DATABASE_NAME,
     autoLoadEntities: true,
     // entities: [Users, User_Post],
-    synchronize: true
+    synchronize: false
   })
